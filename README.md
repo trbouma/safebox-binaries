@@ -8,3 +8,10 @@ chmod +x ./safebox
 ./safebox
 ```
 
+## Download Ubuntu binary
+```
+curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/ubuntu/safebox
+chmod +x ./safebox
+./safebox
+```
+
