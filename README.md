@@ -77,6 +77,11 @@ Scan the QR code or copy/paste the lightning invoice. Once you have paid, run
 ./safebox check invoice
 ./safebox balance
 ```
-If all goes well, you should see that you have 21 sats
+Make your first Lightning payment (Remember you need to account for fees as well)
+
+```
+./safebox pay 11 jack@primal.net -c "Hey Jack. Paying you from a nostr safebox! " 
+```
+
 
 more to come...
