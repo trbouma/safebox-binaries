@@ -50,16 +50,34 @@ Commands:
   zap        Zap amount to event or to recipient
 
 ```
+You can see help for each subcommand, for example for `./safebox deposit --help`
+```
+./safebox deposit --help
+Usage: safebox deposit [OPTIONS] AMOUNT
+
+  deposit funds into wallet via lightning invoice
+
+Options:
+  --help  Show this message and exit.
+```
+A quick note: The reason you specify `./safebox` is so the shell runs the file in the current directory. Otherwise it will try to find it in the path. If you are brave you can `sudo mv ./safebox /usr/bin` if you want to run it like an ordinary command without the annoying`./` prefix.
 
 To see your local default configuration settings, run
 ```
 ./safebox set
 ```
+You can change your local config for your home relay, read relays and your mint. You can add multiple read relays delimited by a comma. Don't worry about specifying `wss://` or `https://` as these are added automatically into the config file.
+```
+./safebox set -h strfry.openbalance.app -r relay.damus.io,nos.lol -m mint.nimo.cash
+```
+
 
 Create a new wallet instance with a newly-generated npub and nsec
 ```
 ./safebox init
 ```
+There are a couple of options you can add to `./safebox init`. `-k` keeps the same nsec, `-p` publishes the profile as a `kind 0` nostr profile.
+
 Check your profile to see if everything generated ok. You should see your npub and nsec and a few other details
 ```
 ./safebox profile
@@ -83,5 +101,9 @@ Make your first Lightning payment (Remember you need to account for fees as well
 ./safebox pay 11 jack@primal.net -c "Hey Jack. Paying you from a nostr safebox! " 
 ```
 
+Do a zap to an event (this is an event id published by Derek Ross)
+```
+./safebox zap 1 -e note1le5eexrydpfhnnh5k8ksrz88jgt2lkc37j2htkrq3ct02t25dzpqueaxma -c "pura vida"
+```
 
 more to come...
