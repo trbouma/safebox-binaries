@@ -56,6 +56,16 @@ To see your local default configuration settings, run
 ./safebox set
 ```
 
+Create a new wallet instance with a newly-generated npub and nsec
+```
+./safebox init
+```
+Check your profile to see if everything generated ok. You should see your npub and nsec and a few other details
+```
+./safebox profile
+```
+
+
 Getting your first funds, say for example depositing 21 sats, run
 ```
 ./safebox deposit 21
