@@ -1,5 +1,8 @@
-# safebox-binaries
-Safebox binary files
+# Safebox Binaries
+*Turn your machine into an ecash machine!*
+
+![Safebox --help](./assets/safebox-help.png)
+
 
 ## Download Mac binary
 ```
