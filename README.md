@@ -6,16 +6,18 @@
 
 ## Download Mac binary
 ```
-curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/mac-os/safebox
-chmod +x ./safebox
-./safebox
+sudo curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/mac-os/safebox
+sudo chmod +x ./safebox
+sudo mv ./safebox /usr/bin
+safebox
 ```
 
 ## Download Ubuntu binary
 ```
-curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/ubuntu/safebox
-chmod +x ./safebox
-./safebox
+sudo curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/ubuntu/safebox
+sudo chmod +x ./safebox
+sudo mv ./safebox /usr/bin
+safebox
 ```
 
 If all goes well, you should see the following:
