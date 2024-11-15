@@ -16,8 +16,11 @@ safebox
 ```
 sudo curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/ubuntu/safebox
 sudo chmod +x ./safebox
-sudo mv ./safebox /usr/bin
-safebox
+./safebox init
+./safebox profile
+./safebox balance
+# sudo mv ./safebox /usr/bin
+
 ```
 
 If all goes well, you should see the following:
