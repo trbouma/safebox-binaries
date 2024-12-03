@@ -4,26 +4,32 @@
 ![Safebox --help](./assets/safebox-help.png)
 
 
-## Download Mac binary
+## Choose the right binary for your OS
+### For Mac, download the Mac binary
 ```
 sudo curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/mac-os/safebox
 sudo chmod +x ./safebox
-sudo mv ./safebox /usr/bin
-safebox
+
 ```
 
-## Download Ubuntu binary
+###  For Ubuntu, download the Linux binary
 ```
 sudo curl -O https://raw.githubusercontent.com/trbouma/safebox-binaries/main/ubuntu/safebox
 sudo chmod +x ./safebox
-./safebox init
-./safebox profile
-./safebox balance
-# sudo mv ./safebox /usr/bin
 
 ```
 
-If all goes well, you should see the following:
+Now you can run safebox for the first time
+```
+./safebox init
+./safebox profile
+./safebox balance
+```
+A quick note: The reason you specify `./safebox` is so the shell runs the file in the current directory. Otherwise it will try to find it in the path. If you are brave you can `sudo mv ./safebox /usr/bin` if you want to run it like an ordinary command without the annoying`./` prefix.
+
+
+
+If everything went well, you should see the following:
 ```
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -58,17 +64,14 @@ Commands:
   zap        Zap amount to event or to recipient
 
 ```
-You can see help for each subcommand, for example for `./safebox deposit --help`
+You can see help for each subcommand, for example for `./safebox info --help`
 ```
-./safebox deposit --help
-Usage: safebox deposit [OPTIONS] AMOUNT
-
-  deposit funds into wallet via lightning invoice
+./safebox info --help
 
 Options:
   --help  Show this message and exit.
 ```
-A quick note: The reason you specify `./safebox` is so the shell runs the file in the current directory. Otherwise it will try to find it in the path. If you are brave you can `sudo mv ./safebox /usr/bin` if you want to run it like an ordinary command without the annoying`./` prefix.
+
 
 To see your local default configuration settings, run
 ```
